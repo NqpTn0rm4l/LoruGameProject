@@ -1,16 +1,29 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PlayerAttackIndicator : MonoBehaviour
+public class PlayerAttackIndicator : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public bool _isDragging;
+
+    public GameObject _Player;
+
+    public void Start()
     {
-        
+        _Player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        _Player.GetComponent<LineRenderer>().SetPosition(0, _Player.transform.position);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+
     }
 }

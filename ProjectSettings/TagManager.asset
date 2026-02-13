@@ -12,6 +12,7 @@ TagManager:
   - Vastaus
   - Pallo
   - Card
+  - CardInView
   layers:
   - Default
   - TransparentFX

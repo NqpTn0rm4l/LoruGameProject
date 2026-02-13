@@ -138,7 +138,6 @@ public class VastausKontrolleri : MonoBehaviour
                     {
                         vastausObjektit = ListaaLahimmat();
                     }
-
                 }
                 else
                 {
